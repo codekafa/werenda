@@ -1,0 +1,118 @@
+﻿
+@inject Microsoft.AspNetCore.Antiforgery.IAntiforgery Xsrf
+
+@{
+    string antiForgeryToken = Xsrf.GetAndStoreTokens(Context).RequestToken;
+}
+
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/_Layout.cshtml";
+}
+
+<div class="container">
+    <h1 class="page-title">@Localizer["login_header"]</h1>
+</div>
+<div class="gap"></div>
+<div class="container">
+    <div class="row" data-gutter="60">
+        <div class="col-md-4">
+            <h3>@Localizer["welcome"]</h3>
+            <p>@Localizer["welcome_message_1"]</p>
+            <p>@Localizer["welcome_message_2"]</p>
+        </div>
+        <div class="col-md-4">
+            <h3>@Localizer["login"]</h3>
+            <div id="login-form">
+                <div class="form-group form-group-icon-left">
+                    <i class="fa fa-user input-icon input-icon-show"></i>
+                    <label>@Localizer["email"]</label>
+                    <input class="form-control" placeholder="" name="Email" id="Email" data-serialize="true" type="email">
+                </div>
+                <div class="form-group form-group-icon-left">
+                    <i class="fa fa-lock input-icon input-icon-show"></i>
+                    <label>@Localizer["password"]</label>
+                    <input class="form-control" type="password" name="Password" id="Password" data-serialize="true" placeholder="">
+                </div>
+                <input class="btn btn-primary" type="button" id="loginBtn" value="@Localizer["login"]">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <h3>@Localizer["new"]</h3>
+            <div id="register-form">
+                <div class="form-group form-group-icon-left">
+                    <i class="fa fa-user input-icon input-icon-show"></i>
+                    <label>@Localizer["first_name"]</label>
+                    <input class="form-control" placeholder="" data-serialize="true" type="text">
+                </div>
+                <div class="form-group form-group-icon-left">
+                    <i class="fa fa-user input-icon input-icon-show"></i>
+                    <label>@Localizer["last_name"]</label>
+                    <input class="form-control" placeholder="" data-serialize="true" type="text">
+                </div>
+                <div class="form-group form-group-icon-left">
+                    <i class="fa fa-envelope input-icon input-icon-show"></i>
+                    <label>@Localizer["email"]</label>
+                    <input class="form-control" placeholder="" data-serialize="true" type="text">
+                </div>
+                <div class="form-group form-group-icon-left">
+                    <i class="fa fa-lock input-icon input-icon-show"></i>
+                    <label>@Localizer["password"]</label>
+                    <label>@Localizer["password+"]</label>
+                    <input class="form-control" type="password" data-serialize="true" placeholder="">
+                </div>
+                <input class="btn btn-primary" type="button" id="registerBtn" value="@Localizer["register"]">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="gap"></div>
+
+
+@section scripts{
+
+    <script>
+
+
+        $(function () {
+
+            $("#loginBtn").click(function (e) {
+                e.preventDefault();
+                var result = FormCreateSerializer("login-form");
+
+                obj = new Object();
+                obj.Email = result.Email;
+                obj.Password = result.Password;
+                $.ajax({
+                    type: "POST",
+                    url: "/Werenda/LoginUserAsync",
+                    contentType: 'application/json', 
+                    data: JSON.stringify(obj),
+                    success: function (e) {
+                        if (e == true) {
+                            swal("@Localizer["success"]", "@Localizer["email_success"]", "success")
+                            setTimeout(function () {
+                                location.href = "/";
+                            }, 1200)
+                        } else {
+                            swal("@Localizer["error"]", "@Localizer["email_error"]", "error")
+                        }
+                    }
+                });
+            });
+
+
+            $("#registerBtn").click(function () {
+
+
+            });
+
+        });
+
+
+    </script>
+
+
+
+}
+

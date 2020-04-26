@@ -1,0 +1,30 @@
+/*YOUR CUSTOM STYLES*/
+
+.owl-cap {
+    margin-top: -200px;
+}
+
+.search-tabs {
+    margin-top: -100px;
+}
+
+.search-btn {
+    margin-top: 30px;
+}
+
+/*.header-top {
+    background: #ed8323 !important;
+}*/
+
+.main-header-search .form-control {
+    margin-bottom: 0;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    /* background: #262626; */
+    /* border-color: #000; */
+    color: #333333;
+}
+
+.main-header-search .fa-search {
+    color: #333333 !important;
+}

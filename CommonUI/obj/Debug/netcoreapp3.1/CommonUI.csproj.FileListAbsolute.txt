@@ -1,0 +1,8 @@
+C:\Users\tayfu\source\repos\WERENDA\CommonUI\bin\Debug\netcoreapp3.1\CommonUI.deps.json
+C:\Users\tayfu\source\repos\WERENDA\CommonUI\bin\Debug\netcoreapp3.1\CommonUI.dll
+C:\Users\tayfu\source\repos\WERENDA\CommonUI\obj\Debug\netcoreapp3.1\CommonUI.AssemblyInfoInputs.cache
+C:\Users\tayfu\source\repos\WERENDA\CommonUI\obj\Debug\netcoreapp3.1\CommonUI.AssemblyInfo.cs
+C:\Users\tayfu\source\repos\WERENDA\CommonUI\obj\Debug\netcoreapp3.1\CommonUI.csprojAssemblyReference.cache
+C:\Users\tayfu\source\repos\WERENDA\CommonUI\bin\Debug\netcoreapp3.1\CommonUI.pdb
+C:\Users\tayfu\source\repos\WERENDA\CommonUI\obj\Debug\netcoreapp3.1\CommonUI.dll
+C:\Users\tayfu\source\repos\WERENDA\CommonUI\obj\Debug\netcoreapp3.1\CommonUI.pdb

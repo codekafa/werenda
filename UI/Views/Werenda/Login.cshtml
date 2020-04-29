@@ -23,7 +23,7 @@
         </div>
         <div class="col-md-4">
             <h3>@Localizer["login"]</h3>
-            <div id="login-form">
+            <form id="login-form">
                 <div class="form-group form-group-icon-left">
                     <i class="fa fa-user input-icon input-icon-show"></i>
                     <label>@Localizer["email"]</label>
@@ -34,8 +34,8 @@
                     <label>@Localizer["password"]</label>
                     <input class="form-control" type="password" name="Password" id="Password" data-serialize="true" placeholder="">
                 </div>
-                <input class="btn btn-primary" type="button" id="loginBtn" value="@Localizer["login"]">
-            </div>
+                <input class="btn btn-primary" type="submit" id="loginBtn" value="@Localizer["login"]">
+            </form>
         </div>
         <div class="col-md-4">
             <h3>@Localizer["new"]</h3>
@@ -76,7 +76,8 @@
 
         $(function () {
 
-            $("#loginBtn").click(function (e) {
+
+            $('#login-form').submit(function (e) {
                 e.preventDefault();
                 var result = FormCreateSerializer("login-form");
 
@@ -85,8 +86,34 @@
                 obj.Password = result.Password;
                 $.ajax({
                     type: "POST",
+                    url: "/Werenda/LoginUser",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json", 
+                    data: JSON.stringify(obj),
+                    success: function (e) {
+                        if (e == true) {
+                            swal("@Localizer["success"]", "@Localizer["email_success"]", "success")
+                            setTimeout(function () {
+                                location.href = "/User/Profile";
+                            }, 1200)
+                        } else {
+                            swal("@Localizer["error"]", "@Localizer["email_error"]", "error")
+                        }
+                    }
+                });
+
+            });
+
+            @*$("#loginBtn").click(function (e) {
+                
+                var result = FormCreateSerializer("login-form");
+
+                obj = new Object();
+                obj.Email = result.Email;
+                obj.Password = result.Password;
+                $.ajax({
+                    type: "POST",
                     url: "/Werenda/LoginUserAsync",
-                    contentType: 'application/json', 
                     data: JSON.stringify(obj),
                     success: function (e) {
                         if (e == true) {
@@ -99,7 +126,7 @@
                         }
                     }
                 });
-            });
+            });*@
 
 
             $("#registerBtn").click(function () {

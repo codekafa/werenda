@@ -59,6 +59,7 @@ namespace Business.ConCreate
             if (user != null && user.is_active && user.is_approve)
             {
                 result.Id = user.id;
+                result.Email = user.email;
                 result.Name = user.first_name;
                 result.LastName = user.last_name;
                 result.Phone = user.phone;

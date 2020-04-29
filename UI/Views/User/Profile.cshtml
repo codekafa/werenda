@@ -1,4 +1,4 @@
-﻿@model Models.UIModel.User.UserProfileModel
+﻿@model Models.UIModel.LoginResultModel
 
 @{
     ViewData["Title"] = "Profile";
@@ -14,9 +14,8 @@
             <div class="col-md-3">
                 <aside class="user-profile-sidebar">
                     <div class="user-profile-avatar text-center">
-                        <img src="img/300x300.png" alt="Image Alternative text" title="AMaze">
-                        <h5>John Doe</h5>
-                        <p>Member Since May 2012</p>
+                        <img src="~/img/300x300.png" alt="Image Alternative text" title="AMaze">
+                        <h5>@Model.FullName</h5>
                     </div>
                     <ul class="list user-profile-nav">
                         <li>
@@ -43,30 +42,30 @@
             <div class="col-md-9">
                 <div class="row">
                     <div class="col-md-5">
-                        <form action="">
-                            <h4>Personal Infomation</h4>
+                        <form  id="user_profile">
+                            <h4>@Localizer["p_inf"]</h4>
                             <div class="form-group form-group-icon-left">
                                 <i class="fa fa-user input-icon"></i>
-                                <label>First Name</label>
-                                <input class="form-control" value="John" type="text">
+                                <label>@Localizer["first_name"]</label>
+                                <input class="form-control" value="@Model.Name"  type="text">
                             </div>
                             <div class="form-group form-group-icon-left">
                                 <i class="fa fa-user input-icon"></i>
-                                <label>Last Name</label>
-                                <input class="form-control" value="Doe" type="text">
+                                <label>@Localizer["last_name"]</label>
+                                <input class="form-control" value="@Model.LastName" type="text">
                             </div>
                             <div class="form-group form-group-icon-left">
                                 <i class="fa fa-envelope input-icon"></i>
-                                <label>E-mail</label>
-                                <input class="form-control" value="johndoe@gmail.com" type="text">
+                                <label>@Localizer["email"]</label>
+                                <input class="form-control" value="@Model.Email" type="text">
                             </div>
                             <div class="form-group form-group-icon-left">
                                 <i class="fa fa-phone input-icon"></i>
-                                <label>Phone Number</label>
-                                <input class="form-control" value="+1 202 555 0113" type="text">
+                                <label>@Localizer["phone"]</label>
+                                <input class="form-control" value="@Model.Phone" type="text">
                             </div>
                             <div class="gap gap-small"></div>
-                            <h4>Location</h4>
+                            @*<h4>Location</h4>
                             <div class="form-group form-group-icon-left">
                                 <i class="fa fa-plane input-icon"></i>
                                 <label>Home Airport</label>
@@ -91,31 +90,31 @@
                             <div class="form-group">
                                 <label>Country</label>
                                 <input class="form-control" value="United Kingdom" type="text">
-                            </div>
+                            </div>*@
                             <hr>
-                            <input type="submit" class="btn btn-primary" value="Save Changes">
+                            <input type="submit" class="btn btn-primary" value="@Localizer["update_profile"]">
                         </form>
                     </div>
                     <div class="col-md-4 col-md-offset-1">
-                        <h4>Change Password</h4>
-                        <form>
+                        <h4>@Localizer["change_password"]</h4>
+                        <form id="change_password">
                             <div class="form-group form-group-icon-left">
                                 <i class="fa fa-lock input-icon"></i>
-                                <label>Current Password</label>
+                                <label>@Localizer["current_password"]</label>
                                 <input class="form-control" type="password">
                             </div>
                             <div class="form-group form-group-icon-left">
                                 <i class="fa fa-lock input-icon"></i>
-                                <label>New Password</label>
+                                <label>@Localizer["new_password"]</label>
                                 <input class="form-control" type="password">
                             </div>
                             <div class="form-group form-group-icon-left">
                                 <i class="fa fa-lock input-icon"></i>
-                                <label>New Password Again</label>
+                                <label>@Localizer["new_password_again"]</label>
                                 <input class="form-control" type="password">
                             </div>
                             <hr>
-                            <input class="btn btn-primary" type="submit" value="Change Password">
+                            <input class="btn btn-primary" type="submit" value="@Localizer["update_password"]">
                         </form>
                     </div>
                 </div>

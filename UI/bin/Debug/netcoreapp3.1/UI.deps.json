@@ -301,11 +301,11 @@
           "UI.dll": {}
         },
         "resources": {
-          "en-US/UI.resources.dll": {
-            "locale": "en-US"
-          },
           "tr-TR/UI.resources.dll": {
             "locale": "tr-TR"
+          },
+          "en-US/UI.resources.dll": {
+            "locale": "en-US"
           }
         },
         "compile": {

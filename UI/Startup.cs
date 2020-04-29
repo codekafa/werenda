@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Threading.Tasks;
-using Business.Abstract;
+﻿using Business.Abstract;
 using Business.ConCreate;
 using DataAccess.Abstract;
 using DataAccess.ConCreate.EFCore;
@@ -15,6 +10,8 @@ using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Razor;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Collections.Generic;
+using System.Globalization;
 using UI.SessionManager;
 
 namespace UI
@@ -38,6 +35,7 @@ namespace UI
             services.AddScoped<IUserDal, EFUserDal>();
             services.AddScoped<IUserAddressDal, EFUserAddressDal>();
 
+            services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix, opt => opt.ResourcesPath = "Resources").AddRazorRuntimeCompilation();
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                     .AddCookie(options =>
                     {
@@ -48,11 +46,8 @@ namespace UI
             {
                 o.ResourcesPath = "Resources";
             });
-
-            services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix, opt => opt.ResourcesPath = "Resources").AddRazorRuntimeCompilation();
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -65,6 +60,7 @@ namespace UI
             app.UseSession();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseAuthentication();
             app.UseAuthorization();
 
             IList<CultureInfo> supportedCultures = new List<CultureInfo>

@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 using Business.Abstract;
 using CommonUI.Constants;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
 using Models.UIModel;
@@ -36,22 +38,19 @@ namespace UI.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public IActionResult LoginUserAsync([FromBody] LoginUserModel loginModel)
+        public async Task<IActionResult> LoginUserAsync([FromBody] LoginUserModel loginModel)
         {
             LoginResultModel result = _userService.LoginUser(loginModel.Email, loginModel.Password);
 
             if (result != null)
             {
-                _sessionManager.SetObject(SessionKeyConstants.CurrentUser, result);
-                var claims = new List<Claim>
-                            {
-                                new Claim(ClaimTypes.Name, loginModel.Email)
-                            };
-
-                var userIdentity = new ClaimsIdentity(claims, "login");
-
-                ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
-                HttpContext.SignInAsync(principal).Wait();
+                var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
+                identity.AddClaim(new Claim(ClaimTypes.Name, result.Email));
+                identity.AddClaim(new Claim(ClaimTypes.GivenName, result.Name));
+                identity.AddClaim(new Claim(ClaimTypes.Surname, result.LastName));
+                identity.AddClaim(new Claim(ClaimTypes.Role, "user"));
+                var principal = new ClaimsPrincipal(identity);
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
                 return Json(true);
             }

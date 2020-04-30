@@ -11,7 +11,9 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Localization;
+using Models;
 using Models.UIModel;
+using Models.UIModel.User;
 using UI.SessionManager;
 
 namespace UI.Controllers
@@ -42,13 +44,28 @@ namespace UI.Controllers
         {
             LoginResultModel result = _userService.LoginUser(loginModel.Email, loginModel.Password);
 
-            if (result != null)
+            if (result != null && result.Id > 0)
             {
                 var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
-                identity.AddClaim(new Claim(ClaimTypes.Name, result.Email));
+                identity.AddClaim(new Claim(ClaimTypes.Email, result.Email));
                 identity.AddClaim(new Claim(ClaimTypes.GivenName, result.Name));
                 identity.AddClaim(new Claim(ClaimTypes.Surname, result.LastName));
-                identity.AddClaim(new Claim(ClaimTypes.Role, "user"));
+                identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, result.Id.ToString()));
+
+                switch (result.UserType)
+                {
+                    case 1:
+                        identity.AddClaim(new Claim(ClaimTypes.Role, "admin"));
+                        break;
+                    case 2:
+                        identity.AddClaim(new Claim(ClaimTypes.Role, "user"));
+                        break;
+                    default:
+                        identity.AddClaim(new Claim(ClaimTypes.Role, "user"));
+                        break;
+                }
+                
+                identity.AddClaim(new Claim(ClaimTypes.Name , result.FullName));
                 var principal = new ClaimsPrincipal(identity);
                 await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
 
@@ -59,17 +76,56 @@ namespace UI.Controllers
                 return Json(false);
             }
         }
-
-        public JsonResult RegisterUser()
+        public async Task<ResultModel> RegisterUserAsync([FromBody]RegisterUserModel registerModel)
         {
-            return new JsonResult(true);
+            ResultModel resultregister = new ResultModel();
+            resultregister = _userService.RegisterUser(registerModel);
+
+            if (!resultregister.IsSuccess)
+            {
+                return resultregister;
+            }
+
+            LoginResultModel result = _userService.LoginUser(registerModel.Email, registerModel.Password);
+
+            if (result != null && result.Id > 0)
+            {
+                var identity = new ClaimsIdentity(CookieAuthenticationDefaults.AuthenticationScheme);
+                identity.AddClaim(new Claim(ClaimTypes.Email, result.Email));
+                identity.AddClaim(new Claim(ClaimTypes.GivenName, result.Name));
+                identity.AddClaim(new Claim(ClaimTypes.Surname, result.LastName));
+                identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, result.Id.ToString()));
+
+                switch (result.UserType)
+                {
+                    case 1:
+                        identity.AddClaim(new Claim(ClaimTypes.Role, "admin"));
+                        break;
+                    case 2:
+                        identity.AddClaim(new Claim(ClaimTypes.Role, "user"));
+                        break;
+                    default:
+                        identity.AddClaim(new Claim(ClaimTypes.Role, "user"));
+                        break;
+                }
+
+                identity.AddClaim(new Claim(ClaimTypes.Name, result.FullName));
+                var principal = new ClaimsPrincipal(identity);
+                await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
+                return resultregister;
+            }
+            else
+            {
+                resultregister.IsSuccess = false;
+                resultregister.Message.Add("error_register");
+                return resultregister;
+            }
         }
         public async Task<IActionResult> LogOut()
         {
             await HttpContext.SignOutAsync();
-
             return RedirectToAction("Index", "Werenda");
         }
-
     }
 }

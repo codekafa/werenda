@@ -1,7 +1,10 @@
 ﻿using Business.Abstract;
+using CommonUI.Constants;
 using DataAccess.Abstract;
 using Entities.ConCreate;
+using Models;
 using Models.UIModel;
+using Models.UIModel.User;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -27,7 +30,7 @@ namespace Business.ConCreate
 
         public List<user_address> GetAddressesByUserId(int user_id)
         {
-           var addresses = _userAddressDal.GetList(x => x.user_id == user_id);
+            var addresses = _userAddressDal.GetList(x => x.user_id == user_id);
             return addresses;
         }
 
@@ -54,16 +57,23 @@ namespace Business.ConCreate
         public LoginResultModel LoginUser(string email, string password)
         {
             LoginResultModel result = new LoginResultModel();
-            var user = GetUserByEmailAndPass(email, password);
-
-            if (user != null && user.is_active && user.is_approve)
+            try
             {
-                result.Id = user.id;
-                result.Email = user.email;
-                result.Name = user.first_name;
-                result.LastName = user.last_name;
-                result.Phone = user.phone;
-                result.UserType = user.user_type;
+                var user = GetUserByEmailAndPass(email, password);
+
+                if (user != null && user.is_active && user.is_approve)
+                {
+                    result.Id = user.id;
+                    result.Email = user.email;
+                    result.Name = user.first_name;
+                    result.LastName = user.last_name;
+                    result.Phone = user.phone;
+                    result.UserType = user.user_type;
+                }
+            }
+            catch (Exception ex)
+            {
+                return result;
             }
             return result;
         }
@@ -73,10 +83,49 @@ namespace Business.ConCreate
             throw new NotImplementedException();
         }
 
-        public users RegisterUser(users newUser)
+        public ResultModel RegisterUser(RegisterUserModel registerModel)
         {
-            _userDal.Add(newUser);
-            return newUser;
+            ResultModel result = new ResultModel();
+
+
+            if (registerModel.Password != registerModel.PasswordAgain)
+            {
+                result.Message.Add("password_again");
+                return result;
+            }
+
+            var is_exist_email = GetUserByEmail(registerModel.Email);
+
+            if (is_exist_email!= null || is_exist_email.id > 0)
+            {
+                result.Message.Add("already_exist_email");
+                return result;
+            }
+
+            try
+            {
+                users newUser = new users();
+                newUser.create_date = DateTime.Now;
+                newUser.email = registerModel.Email;
+                newUser.first_name = registerModel.FirstName;
+                newUser.is_active = true;
+                newUser.is_approve = true;
+                newUser.last_name = registerModel.LastName;
+                newUser.password = registerModel.Password;
+                newUser.user_type = (int)EnumList.UserTypes.User;
+                var user = _userDal.Add(newUser);
+
+                // TODO mail
+
+                result.Data = user;
+                result.IsSuccess = true;
+            }
+            catch (Exception ex)
+            {
+                result.IsSuccess = false;
+                result.Message.Add("error_register");
+            }
+            return result;
         }
 
         public void RemoveUserAddress(user_address address)

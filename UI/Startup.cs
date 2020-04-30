@@ -28,18 +28,21 @@ namespace UI
             services.AddScoped<IUIService, UIManager>();
             services.AddScoped<IUserService, UserManager>();
             services.AddScoped<IUserService, UserManager>();
+            services.AddScoped<IUserCreditService, UserCreditCartManager>();
             services.AddScoped<ISessionManager, UI.SessionManager.SessionManager>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 
             services.AddScoped<IUserDal, EFUserDal>();
             services.AddScoped<IUserAddressDal, EFUserAddressDal>();
+            services.AddScoped<IUserCreditDal, EFUserCreditDal>();
 
             services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix, opt => opt.ResourcesPath = "Resources").AddRazorRuntimeCompilation();
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
                     .AddCookie(options =>
                     {
                         options.LoginPath = "/Werenda/Login/";
+                        options.AccessDeniedPath = "/Werenda/Login";
                     });
 
             services.AddLocalization(o =>

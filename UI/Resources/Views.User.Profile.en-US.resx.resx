@@ -117,11 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="account_settings" xml:space="preserve">
+    <value>Account Settings</value>
+  </data>
   <data name="bookıing_history" xml:space="preserve">
     <value>Booking History</value>
   </data>
   <data name="change_password" xml:space="preserve">
     <value>Change Password</value>
+  </data>
+  <data name="credits" xml:space="preserve">
+    <value>Credit Carts</value>
   </data>
   <data name="current_password" xml:space="preserve">
     <value>Current Password</value>
@@ -138,6 +144,9 @@
   <data name="error" xml:space="preserve">
     <value>Error</value>
   </data>
+  <data name="favorites" xml:space="preserve">
+    <value>Favorites</value>
+  </data>
   <data name="first_name" xml:space="preserve">
     <value>Name</value>
   </data>
@@ -149,6 +158,9 @@
   </data>
   <data name="login_header" xml:space="preserve">
     <value>Login/Register on Werenda</value>
+  </data>
+  <data name="my_homes" xml:space="preserve">
+    <value>My Homes</value>
   </data>
   <data name="new" xml:space="preserve">
     <value>New To Werenda?</value>
@@ -170,6 +182,9 @@
   </data>
   <data name="register" xml:space="preserve">
     <value>Register</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Settings</value>
   </data>
   <data name="success" xml:space="preserve">
     <value>Success</value>

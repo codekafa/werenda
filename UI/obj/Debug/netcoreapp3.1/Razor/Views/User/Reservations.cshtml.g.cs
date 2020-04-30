@@ -26,8 +26,15 @@ using Microsoft.AspNetCore.Mvc.Localization;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\tayfu\source\repos\WERENDA\UI\Views\_ViewImports.cshtml"
+using System.Security.Claims;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ef1bc7311580313eb089208919922026e4887157", @"/Views/User/Reservations.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4ec17d292d10c4b7d5b25b67a374b4aeff8bd5d6", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"ac279599a0caf7dfd39060e2a06d36dd24f4d88b", @"/Views/_ViewImports.cshtml")]
     public class Views_User_Reservations : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

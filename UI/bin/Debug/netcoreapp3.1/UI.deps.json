@@ -301,11 +301,11 @@
           "UI.dll": {}
         },
         "resources": {
-          "tr-TR/UI.resources.dll": {
-            "locale": "tr-TR"
-          },
           "en-US/UI.resources.dll": {
             "locale": "en-US"
+          },
+          "tr-TR/UI.resources.dll": {
+            "locale": "tr-TR"
           }
         },
         "compile": {
@@ -2351,6 +2351,7 @@
       },
       "Business/1.0.0": {
         "dependencies": {
+          "CommonUI": "1.0.0",
           "DataAccess": "1.0.0",
           "Entities": "1.0.0",
           "Models": "1.0.0"

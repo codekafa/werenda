@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <Folder Include="ComplexTypes\" />
-    <Folder Include="ConCreate\" />
   </ItemGroup>
 
   <ItemGroup>

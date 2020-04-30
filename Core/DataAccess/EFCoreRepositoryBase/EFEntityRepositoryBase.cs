@@ -30,11 +30,11 @@ namespace Core.DataAccess.EFCoreRepositoryBase
             }
         }
 
-        public TEntity Get(Expression<Func<TEntity, bool>> filter = null)
+        public TEntity Get(Expression<Func<TEntity, bool>> filter)
         {
             using (var context = new TContext())
             {
-                return context.Set<TEntity>().SingleOrDefault(filter);
+                return context.Set<TEntity>().Where(filter).FirstOrDefault();
             }
         }
 

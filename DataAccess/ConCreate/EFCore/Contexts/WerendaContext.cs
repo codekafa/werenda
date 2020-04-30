@@ -18,5 +18,7 @@ namespace DataAccess.ConCreate.EFCore.Contexts
         public DbSet<product_photos> product_photos { get; set; }
 
         public DbSet<product_facilities> product_facilities { get; set; }
+
+        public DbSet<user_credits> user_credits { get; set; }
     }
 }

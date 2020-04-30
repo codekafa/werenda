@@ -28,6 +28,9 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "C:\\Users\\tayfu\\source\\repos\\WERENDA\\CommonUI\\CommonUI.csproj": {
+                "projectPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\CommonUI\\CommonUI.csproj"
+              },
               "C:\\Users\\tayfu\\source\\repos\\WERENDA\\DataAccess\\DataAccess.csproj": {
                 "projectPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\DataAccess\\DataAccess.csproj"
               },

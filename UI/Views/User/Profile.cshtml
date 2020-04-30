@@ -1,4 +1,4 @@
-﻿@model Models.UIModel.LoginResultModel
+﻿@model Entities.ConCreate.users
 
 @{
     ViewData["Title"] = "Profile";
@@ -6,7 +6,7 @@
 }
 
     <div class="container">
-        <h1 class="page-title">Account Settings</h1>
+        <h1 class="page-title">@Localizer["account_settings"]</h1>
     </div>
 
     <div class="container">
@@ -15,26 +15,23 @@
                 <aside class="user-profile-sidebar">
                     <div class="user-profile-avatar text-center">
                         <img src="~/img/300x300.png" alt="Image Alternative text" title="AMaze">
-                        <h5>@Model.FullName</h5>
+                        <h5>@Model.first_name @Model.last_name</h5>
                     </div>
                     <ul class="list user-profile-nav">
                         <li>
-                            <a href="user-profile.html"><i class="fa fa-user"></i>Overview</a>
+                            <a href="~/User/Profile"><i class="fa fa-cog"></i>@Localizer["settings"]</a>
                         </li>
                         <li>
-                            <a href="user-profile-settings.html"><i class="fa fa-cog"></i>Settings</a>
+                            <a href="user-profile-booking-history.html"><i class="fa fa-clock-o"></i>@Localizer["booking_history"]</a>
                         </li>
                         <li>
-                            <a href="user-profile-photos.html"><i class="fa fa-camera"></i>My Travel Photos</a>
+                            <a href="~/User/MyCredits"><i class="fa fa-credit-card"></i>@Localizer["credits"]</a>
                         </li>
                         <li>
-                            <a href="user-profile-booking-history.html"><i class="fa fa-clock-o"></i>Booking History</a>
+                            <a href="user-profile-wishlist.html"><i class="fa fa-heart-o"></i>@Localizer["my_homes"]</a>
                         </li>
                         <li>
-                            <a href="user-profile-cards.html"><i class="fa fa-credit-card"></i>Credit/Debit Cards</a>
-                        </li>
-                        <li>
-                            <a href="user-profile-wishlist.html"><i class="fa fa-heart-o"></i>Wishlist</a>
+                            <a href="user-profile-wishlist.html"><i class="fa fa-heart-o"></i>@Localizer["favorites"]</a>
                         </li>
                     </ul>
                 </aside>
@@ -47,22 +44,22 @@
                             <div class="form-group form-group-icon-left">
                                 <i class="fa fa-user input-icon"></i>
                                 <label>@Localizer["first_name"]</label>
-                                <input class="form-control" value="@Model.Name"  type="text">
+                                <input class="form-control" value="@Model.first_name"  type="text">
                             </div>
                             <div class="form-group form-group-icon-left">
                                 <i class="fa fa-user input-icon"></i>
                                 <label>@Localizer["last_name"]</label>
-                                <input class="form-control" value="@Model.LastName" type="text">
+                                <input class="form-control" value="@Model.last_name" type="text">
                             </div>
                             <div class="form-group form-group-icon-left">
                                 <i class="fa fa-envelope input-icon"></i>
                                 <label>@Localizer["email"]</label>
-                                <input class="form-control" value="@Model.Email" type="text">
+                                <input class="form-control" value="@Model.email" type="text">
                             </div>
                             <div class="form-group form-group-icon-left">
                                 <i class="fa fa-phone input-icon"></i>
                                 <label>@Localizer["phone"]</label>
-                                <input class="form-control" value="@Model.Phone" type="text">
+                                <input class="form-control" value="@Model.phone" type="text">
                             </div>
                             <div class="gap gap-small"></div>
                             @*<h4>Location</h4>

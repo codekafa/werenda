@@ -39,30 +39,31 @@
         </div>
         <div class="col-md-4">
             <h3>@Localizer["new"]</h3>
-            <div id="register-form">
+            <form id="register-form">
                 <div class="form-group form-group-icon-left">
                     <i class="fa fa-user input-icon input-icon-show"></i>
                     <label>@Localizer["first_name"]</label>
-                    <input class="form-control" placeholder="" data-serialize="true" type="text">
+                    <input class="form-control" name="FirstName" id="FirstName" placeholder="" data-serialize="true" type="text">
                 </div>
                 <div class="form-group form-group-icon-left">
                     <i class="fa fa-user input-icon input-icon-show"></i>
                     <label>@Localizer["last_name"]</label>
-                    <input class="form-control" placeholder="" data-serialize="true" type="text">
+                    <input class="form-control" placeholder="" name="LastName" id="LastName" data-serialize="true" type="text">
                 </div>
                 <div class="form-group form-group-icon-left">
                     <i class="fa fa-envelope input-icon input-icon-show"></i>
                     <label>@Localizer["email"]</label>
-                    <input class="form-control" placeholder="" data-serialize="true" type="text">
+                    <input class="form-control" placeholder="" name="Email" id="Email" data-serialize="true" type="text">
                 </div>
                 <div class="form-group form-group-icon-left">
                     <i class="fa fa-lock input-icon input-icon-show"></i>
                     <label>@Localizer["password"]</label>
+                    <input class="form-control" type="password" name="Password" id="Password" data-serialize="true" placeholder="">
                     <label>@Localizer["password+"]</label>
-                    <input class="form-control" type="password" data-serialize="true" placeholder="">
+                    <input class="form-control" type="password" name="PasswordAgain" id="PasswordAgain" data-serialize="true" placeholder="">
                 </div>
-                <input class="btn btn-primary" type="button" id="registerBtn" value="@Localizer["register"]">
-            </div>
+                <input class="btn btn-primary" type="submit" id="registerBtn" value="@Localizer["register"]">
+            </form>
         </div>
     </div>
 </div>
@@ -76,7 +77,6 @@
 
         $(function () {
 
-
             $('#login-form').submit(function (e) {
                 e.preventDefault();
                 var result = FormCreateSerializer("login-form");
@@ -88,7 +88,7 @@
                     type: "POST",
                     url: "/Werenda/LoginUser",
                     contentType: "application/json; charset=utf-8",
-                    dataType: "json", 
+                    dataType: "json",
                     data: JSON.stringify(obj),
                     success: function (e) {
                         if (e == true) {
@@ -104,36 +104,36 @@
 
             });
 
-            @*$("#loginBtn").click(function (e) {
-                
-                var result = FormCreateSerializer("login-form");
+           $('#register-form').submit(function (e) {
+                e.preventDefault();
+                var result = FormCreateSerializer("register-form");
 
                 obj = new Object();
                 obj.Email = result.Email;
                 obj.Password = result.Password;
+                obj.PasswordAgain = result.PasswordAgain;
+                obj.FirstName = result.FirstName;
+                obj.LastName = result.LastName;
+                console.log(obj);
                 $.ajax({
                     type: "POST",
-                    url: "/Werenda/LoginUserAsync",
+                    url: "/Werenda/RegisterUser",
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
                     data: JSON.stringify(obj),
                     success: function (e) {
-                        if (e == true) {
-                            swal("@Localizer["success"]", "@Localizer["email_success"]", "success")
+                        if (e.isSuccess == true) {
+                            swal("@Localizer["success"]", "@Localizer["register_success"]", "success")
                             setTimeout(function () {
-                                location.href = "/";
+                                location.href = "/User/Profile";
                             }, 1200)
                         } else {
-                            swal("@Localizer["error"]", "@Localizer["email_error"]", "error")
+                            swal("@Localizer["error"]", e.Data.Message[0], "error")
                         }
                     }
                 });
-            });*@
-
-
-            $("#registerBtn").click(function () {
-
 
             });
-
         });
 
 

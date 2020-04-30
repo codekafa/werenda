@@ -2177,6 +2177,7 @@
       },
       "Business/1.0.0": {
         "dependencies": {
+          "CommonUI": "1.0.0",
           "DataAccess": "1.0.0",
           "Entities": "1.0.0",
           "Models": "1.0.0"

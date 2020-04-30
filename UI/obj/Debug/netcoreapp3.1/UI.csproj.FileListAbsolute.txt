@@ -439,3 +439,6 @@ C:\Users\tayfu\source\repos\WERENDA\UI\obj\Debug\netcoreapp3.1\Razor\Views\User\
 C:\Users\tayfu\source\repos\WERENDA\UI\obj\Debug\netcoreapp3.1\Razor\Views\User\Reservations.cshtml.g.cs
 C:\Users\tayfu\source\repos\WERENDA\UI\obj\Debug\netcoreapp3.1\UI.Resources.Views.User.Profile.en-US.resx.resources
 C:\Users\tayfu\source\repos\WERENDA\UI\obj\Debug\netcoreapp3.1\UI.Resources.Views.User.Profile.tr-TR.resources
+C:\Users\tayfu\source\repos\WERENDA\UI\obj\Debug\netcoreapp3.1\Razor\Views\User\MyCredits.cshtml.g.cs
+C:\Users\tayfu\source\repos\WERENDA\UI\obj\Debug\netcoreapp3.1\UI.Resources.Views.User.MyCredits.en-US.resources
+C:\Users\tayfu\source\repos\WERENDA\UI\obj\Debug\netcoreapp3.1\UI.Resources.Views.User.MyCredits.tr-TR.resources

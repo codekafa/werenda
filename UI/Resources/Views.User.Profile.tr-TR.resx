@@ -117,11 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="account_settings" xml:space="preserve">
+    <value>Profil Ayarları</value>
+  </data>
   <data name="booking_history" xml:space="preserve">
     <value>Seyahat Bilgilerim</value>
   </data>
   <data name="change_password" xml:space="preserve">
     <value>Şifre Değiştir</value>
+  </data>
+  <data name="credits" xml:space="preserve">
+    <value>Kredi Kartları</value>
   </data>
   <data name="current_password" xml:space="preserve">
     <value>Mevcut Şifre</value>
@@ -138,6 +144,9 @@
   <data name="error" xml:space="preserve">
     <value>Hata!</value>
   </data>
+  <data name="favorites" xml:space="preserve">
+    <value>Favoriler</value>
+  </data>
   <data name="first_name" xml:space="preserve">
     <value>Adınız</value>
   </data>
@@ -149,6 +158,9 @@
   </data>
   <data name="login_header" xml:space="preserve">
     <value>Werenda için Kayıt Ol/Giriş Yap</value>
+  </data>
+  <data name="my_homes" xml:space="preserve">
+    <value>Evlerim</value>
   </data>
   <data name="new" xml:space="preserve">
     <value>Werenda'da yeni misin?</value>
@@ -170,6 +182,9 @@
   </data>
   <data name="register" xml:space="preserve">
     <value>Kayıt Ol</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>Ayarlar</value>
   </data>
   <data name="success" xml:space="preserve">
     <value>Başarılı!</value>

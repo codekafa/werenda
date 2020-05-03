@@ -5,3 +5,4 @@ C:\Users\tayfu\source\repos\WERENDA\CommonUI\obj\Debug\netcoreapp3.1\CommonUI.As
 C:\Users\tayfu\source\repos\WERENDA\CommonUI\bin\Debug\netcoreapp3.1\CommonUI.pdb
 C:\Users\tayfu\source\repos\WERENDA\CommonUI\obj\Debug\netcoreapp3.1\CommonUI.dll
 C:\Users\tayfu\source\repos\WERENDA\CommonUI\obj\Debug\netcoreapp3.1\CommonUI.pdb
+C:\Users\tayfu\source\repos\WERENDA\CommonUI\obj\Debug\netcoreapp3.1\CommonUI.csprojAssemblyReference.cache

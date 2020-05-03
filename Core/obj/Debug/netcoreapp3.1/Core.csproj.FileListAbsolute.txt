@@ -5,3 +5,4 @@ C:\Users\tayfu\source\repos\WERENDA\Core\obj\Debug\netcoreapp3.1\Core.AssemblyIn
 C:\Users\tayfu\source\repos\WERENDA\Core\bin\Debug\netcoreapp3.1\Core.pdb
 C:\Users\tayfu\source\repos\WERENDA\Core\obj\Debug\netcoreapp3.1\Core.dll
 C:\Users\tayfu\source\repos\WERENDA\Core\obj\Debug\netcoreapp3.1\Core.pdb
+C:\Users\tayfu\source\repos\WERENDA\Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache

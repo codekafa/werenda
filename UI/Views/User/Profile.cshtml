@@ -15,23 +15,23 @@
                 <aside class="user-profile-sidebar">
                     <div class="user-profile-avatar text-center">
                         <img src="~/img/300x300.png" alt="Image Alternative text" title="AMaze">
-                        <h5>@Model.first_name @Model.last_name</h5>
+                        <h5>@Context.User.Identity.Name</h5>
                     </div>
                     <ul class="list user-profile-nav">
                         <li>
                             <a href="~/User/Profile"><i class="fa fa-cog"></i>@Localizer["settings"]</a>
                         </li>
                         <li>
-                            <a href="user-profile-booking-history.html"><i class="fa fa-clock-o"></i>@Localizer["booking_history"]</a>
+                            <a href="~/User/MyReservations"><i class="fa fa-clock-o"></i>@Localizer["booking_history"]</a>
                         </li>
                         <li>
                             <a href="~/User/MyCredits"><i class="fa fa-credit-card"></i>@Localizer["credits"]</a>
                         </li>
                         <li>
-                            <a href="user-profile-wishlist.html"><i class="fa fa-heart-o"></i>@Localizer["my_homes"]</a>
+                            <a href="~/User/MyHomes"><i class="fa fa-heart-o"></i>@Localizer["my_homes"]</a>
                         </li>
                         <li>
-                            <a href="user-profile-wishlist.html"><i class="fa fa-heart-o"></i>@Localizer["favorites"]</a>
+                            <a href="~/User/MyFavorites"><i class="fa fa-heart-o"></i>@Localizer["favorites"]</a>
                         </li>
                     </ul>
                 </aside>

@@ -39,5 +39,30 @@ namespace UI.Controllers
             var list = _creditManager.GetUserCredits(id);
             return View(list);
         }
+
+        public IActionResult MyHomes()
+        {
+            var ids = User.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier)
+               .Select(c => c.Value).SingleOrDefault();
+
+            int id = Convert.ToInt32(ids);
+            var list = _creditManager.GetUserCredits(id);
+            return View(list);
+        }
+
+        public IActionResult MyFavorites()
+        {
+            var ids = User.Claims.Where(c => c.Type == ClaimTypes.NameIdentifier)
+               .Select(c => c.Value).SingleOrDefault();
+
+            int id = Convert.ToInt32(ids);
+            var list = _creditManager.GetUserCredits(id);
+            return View(list);
+        }
+
+        public IActionResult AddNewHome()
+        {
+            return View();
+        }
     }
 }

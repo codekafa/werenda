@@ -20,5 +20,17 @@ namespace DataAccess.ConCreate.EFCore.Contexts
         public DbSet<product_facilities> product_facilities { get; set; }
 
         public DbSet<user_credits> user_credits { get; set; }
+
+        public DbSet<cities> cities { get; set; }
+
+        public DbSet<districts> districts { get; set; }
+
+        public DbSet<have_rooms> have_rooms { get; set; }
+
+        public DbSet<heating> heating { get; set; }
+
+        public DbSet<towns> towns { get; set; }
+
+        public DbSet<rooms> rooms { get; set; }
     }
 }

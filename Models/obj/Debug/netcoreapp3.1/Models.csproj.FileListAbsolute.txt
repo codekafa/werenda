@@ -11,3 +11,17 @@ C:\Users\tayfu\source\repos\WERENDA\Models\bin\Debug\netcoreapp3.1\Entities.dll
 C:\Users\tayfu\source\repos\WERENDA\Models\bin\Debug\netcoreapp3.1\Entities.pdb
 C:\Users\tayfu\source\repos\WERENDA\Models\bin\Debug\netcoreapp3.1\Core.pdb
 C:\Users\tayfu\source\repos\WERENDA\Models\obj\Debug\netcoreapp3.1\Models.csproj.CopyComplete
+C:\Users\tayfu\source\repos\codekafa\werenda\Models\bin\Debug\netcoreapp3.1\Models.deps.json
+C:\Users\tayfu\source\repos\codekafa\werenda\Models\bin\Debug\netcoreapp3.1\Models.dll
+C:\Users\tayfu\source\repos\codekafa\werenda\Models\bin\Debug\netcoreapp3.1\Models.pdb
+C:\Users\tayfu\source\repos\codekafa\werenda\Models\bin\Debug\netcoreapp3.1\Core.dll
+C:\Users\tayfu\source\repos\codekafa\werenda\Models\bin\Debug\netcoreapp3.1\Entities.dll
+C:\Users\tayfu\source\repos\codekafa\werenda\Models\bin\Debug\netcoreapp3.1\Entities.pdb
+C:\Users\tayfu\source\repos\codekafa\werenda\Models\bin\Debug\netcoreapp3.1\Core.pdb
+C:\Users\tayfu\source\repos\codekafa\werenda\Models\obj\Debug\netcoreapp3.1\Models.csprojAssemblyReference.cache
+C:\Users\tayfu\source\repos\codekafa\werenda\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfoInputs.cache
+C:\Users\tayfu\source\repos\codekafa\werenda\Models\obj\Debug\netcoreapp3.1\Models.AssemblyInfo.cs
+C:\Users\tayfu\source\repos\codekafa\werenda\Models\obj\Debug\netcoreapp3.1\Models.csproj.CoreCompileInputs.cache
+C:\Users\tayfu\source\repos\codekafa\werenda\Models\obj\Debug\netcoreapp3.1\Models.csproj.CopyComplete
+C:\Users\tayfu\source\repos\codekafa\werenda\Models\obj\Debug\netcoreapp3.1\Models.dll
+C:\Users\tayfu\source\repos\codekafa\werenda\Models\obj\Debug\netcoreapp3.1\Models.pdb

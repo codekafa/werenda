@@ -1,44 +1,48 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Business\\Business.csproj": {}
+    "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Business\\Business.csproj": {}
   },
   "projects": {
-    "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Business\\Business.csproj": {
+    "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Business\\Business.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Business\\Business.csproj",
+        "projectUniqueName": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Business\\Business.csproj",
         "projectName": "Business",
-        "projectPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Business\\Business.csproj",
+        "projectPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Business\\Business.csproj",
         "packagesPath": "C:\\Users\\tayfu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Business\\obj\\",
+        "outputPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Business\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\tayfu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://deturdynamic.pkgs.visualstudio.com/DeturDynamic/_packaging/DeturGroup/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\tayfu\\source\\repos\\WERENDA\\CommonUI\\CommonUI.csproj": {
-                "projectPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\CommonUI\\CommonUI.csproj"
+              "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\CommonUI\\CommonUI.csproj": {
+                "projectPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\CommonUI\\CommonUI.csproj"
               },
-              "C:\\Users\\tayfu\\source\\repos\\WERENDA\\DataAccess\\DataAccess.csproj": {
-                "projectPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\DataAccess\\DataAccess.csproj"
+              "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\DataAccess\\DataAccess.csproj": {
+                "projectPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\DataAccess\\DataAccess.csproj"
               },
-              "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Entities\\Entities.csproj"
+              "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Entities\\Entities.csproj"
               },
-              "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Models\\Models.csproj"
+              "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Models\\Models.csproj"
               }
             }
           }
@@ -66,30 +70,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tayfu\\source\\repos\\WERENDA\\CommonUI\\CommonUI.csproj": {
+    "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\CommonUI\\CommonUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\CommonUI\\CommonUI.csproj",
+        "projectUniqueName": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\CommonUI\\CommonUI.csproj",
         "projectName": "CommonUI",
-        "projectPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\CommonUI\\CommonUI.csproj",
+        "projectPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\CommonUI\\CommonUI.csproj",
         "packagesPath": "C:\\Users\\tayfu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\CommonUI\\obj\\",
+        "outputPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\CommonUI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\tayfu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://deturdynamic.pkgs.visualstudio.com/DeturDynamic/_packaging/DeturGroup/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -129,30 +137,34 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Core\\Core.csproj": {
+    "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Core\\Core.csproj",
+        "projectPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Core\\Core.csproj",
         "packagesPath": "C:\\Users\\tayfu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Core\\obj\\",
+        "outputPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\tayfu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://deturdynamic.pkgs.visualstudio.com/DeturDynamic/_packaging/DeturGroup/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
@@ -188,39 +200,43 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tayfu\\source\\repos\\WERENDA\\DataAccess\\DataAccess.csproj": {
+    "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\DataAccess\\DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\DataAccess\\DataAccess.csproj",
+        "projectUniqueName": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\DataAccess\\DataAccess.csproj",
         "projectName": "DataAccess",
-        "projectPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\DataAccess\\DataAccess.csproj",
+        "projectPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\DataAccess\\DataAccess.csproj",
         "packagesPath": "C:\\Users\\tayfu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\DataAccess\\obj\\",
+        "outputPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\DataAccess\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\tayfu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://deturdynamic.pkgs.visualstudio.com/DeturDynamic/_packaging/DeturGroup/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Core\\Core.csproj"
+              "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Core\\Core.csproj"
               },
-              "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Entities\\Entities.csproj"
+              "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Entities\\Entities.csproj"
               }
             }
           }
@@ -254,36 +270,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Entities\\Entities.csproj": {
+    "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Entities\\Entities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Entities\\Entities.csproj",
+        "projectUniqueName": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Entities\\Entities.csproj",
         "projectName": "Entities",
-        "projectPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Entities\\Entities.csproj",
+        "projectPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Entities\\Entities.csproj",
         "packagesPath": "C:\\Users\\tayfu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Entities\\obj\\",
+        "outputPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Entities\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\tayfu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://deturdynamic.pkgs.visualstudio.com/DeturDynamic/_packaging/DeturGroup/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Core\\Core.csproj": {
-                "projectPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Core\\Core.csproj"
+              "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Core\\Core.csproj"
               }
             }
           }
@@ -311,36 +331,40 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Models\\Models.csproj": {
+    "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Models\\Models.csproj",
+        "projectPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\tayfu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Models\\obj\\",
+        "outputPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Models\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
           "C:\\Users\\tayfu\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://deturdynamic.pkgs.visualstudio.com/DeturDynamic/_packaging/DeturGroup/nuget/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\tayfu\\source\\repos\\WERENDA\\Entities\\Entities.csproj"
+              "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Entities\\Entities.csproj": {
+                "projectPath": "C:\\Users\\tayfu\\source\\repos\\codekafa\\werenda\\Entities\\Entities.csproj"
               }
             }
           }
@@ -368,7 +392,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }

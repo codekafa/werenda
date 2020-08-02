@@ -18,8 +18,6 @@ namespace UI
 {
     public class Startup
     {
-        // This method gets called by the runtime. Use this method to add services to the container.
-        // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSession();
@@ -36,6 +34,12 @@ namespace UI
             services.AddScoped<IUserDal, EFUserDal>();
             services.AddScoped<IUserAddressDal, EFUserAddressDal>();
             services.AddScoped<IUserCreditDal, EFUserCreditDal>();
+
+            services.AddScoped<ILexiconDal, EFLexiconDal>();
+            services.AddScoped<IPageDal, EFPageDal>();
+            services.AddScoped<ICultureDal, EFCultureDal>();
+
+
 
             services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix, opt => opt.ResourcesPath = "Resources").AddRazorRuntimeCompilation();
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)

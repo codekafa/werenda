@@ -21,11 +21,10 @@ namespace Panel.Controllers
             _sessionManager = sessionManager;
             _userManager = userManager;
         }
-
         public ActionResult Login()
         {
             return View();
-        } 
+        }
         public JsonResult LoginUser(LoginUserModel userModel)
         {
             var result = _userManager.LoginUser(userModel.Email, userModel.Password);

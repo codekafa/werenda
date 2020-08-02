@@ -5,7 +5,7 @@ namespace DataAccess.ConCreate.EFCore.Contexts
 {
     public class WerendaContext : DbContext
     {
-        private const string ConnectionString = @"server=.;database=test;trusted_connection=true;";
+        private const string ConnectionString = @"Server=.\SQLEXPRESS;Database=test;Trusted_Connection=True;";
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer(ConnectionString);
@@ -32,5 +32,9 @@ namespace DataAccess.ConCreate.EFCore.Contexts
         public DbSet<towns> towns { get; set; }
 
         public DbSet<rooms> rooms { get; set; }
+
+        public DbSet<lexicons> lexicons { get; set; }
+
+        public DbSet<cultures> cultures { get; set; }
     }
 }

@@ -87,6 +87,11 @@ namespace Business.ConCreate
         {
             ResultModel result = new ResultModel();
 
+            if (string.IsNullOrEmpty(registerModel.Email))
+            {
+                result.Message.Add("email_is_required");
+                return result;
+            }
 
             if (registerModel.Password != registerModel.PasswordAgain)
             {

@@ -36,5 +36,7 @@ namespace DataAccess.ConCreate.EFCore.Contexts
         public DbSet<lexicons> lexicons { get; set; }
 
         public DbSet<cultures> cultures { get; set; }
+
+        public DbSet<countries> countries { get; set; }
     }
 }

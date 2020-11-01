@@ -19,6 +19,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Models", "Models\Models.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CommonUI", "CommonUI\CommonUI.csproj", "{7DE77525-CE2B-4355-8469-30FE4DB84174}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WEBUI", "WEBUI", "{BBB412C3-E7F9-44E8-86A7-D3B84453435A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{6CA21552-7743-4400-B2CE-DC05F1BDD534}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UserInterface", "UserInterface", "{48EEB2C3-9000-43C3-934D-2B14B2E0F67C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,9 +63,17 @@ Global
 		{7DE77525-CE2B-4355-8469-30FE4DB84174}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DE77525-CE2B-4355-8469-30FE4DB84174}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DE77525-CE2B-4355-8469-30FE4DB84174}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CA21552-7743-4400-B2CE-DC05F1BDD534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CA21552-7743-4400-B2CE-DC05F1BDD534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CA21552-7743-4400-B2CE-DC05F1BDD534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CA21552-7743-4400-B2CE-DC05F1BDD534}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{6CA21552-7743-4400-B2CE-DC05F1BDD534} = {BBB412C3-E7F9-44E8-86A7-D3B84453435A}
+		{48EEB2C3-9000-43C3-934D-2B14B2E0F67C} = {BBB412C3-E7F9-44E8-86A7-D3B84453435A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BC9FC809-7DE0-4C40-8F84-5977D434F553}
